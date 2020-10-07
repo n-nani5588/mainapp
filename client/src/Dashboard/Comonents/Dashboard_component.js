@@ -88,7 +88,9 @@ let newsnew ;
     const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
-    <div style={{margin:"0px",padding:"0px",backgroundColor:"#fff",color:"black",textTransform:"uppercase"}}>
+   <div>
+    <div className="dashboard_Main" >
+      
       <Container maxWidth="lg" className={classes.container}>
 
      {/* Jubotron */}
@@ -113,7 +115,7 @@ let newsnew ;
      
      <Grid container spacing={2}>
        <Grid item xs={12} justify="center" sm={11}>
-           <input className="_input_class form-control sm" value={`http://app-d2fb78f3-b28e-4d2d-ac89-da3d2f8c5f0a.cleverapps.io/Reffer/${userdata.userId}`} id="myInput"/>
+           <input className="_input_class form-control sm" value={`http://www.genietreasures.com/Reffer/${userdata.userId}`} id="myInput"/>
        </Grid>
        <Grid item xs={12} sm={1}>
        <span> <button className="btn btn-sm" onClick={() => Copy_function()}>Copy</button></span>
@@ -262,6 +264,7 @@ let newsnew ;
         </Container> 
       
     </div>
+    </div> 
   );
 }
 

@@ -152,7 +152,7 @@ class DepositStatement extends React.Component{
 
     render()
     {
-        return(   <div style={{margin:"0px",padding:"2% 10%"}}>
+        return(   <div style={{margin:"0px",padding:"2% 10%",textTransform:"uppercase"}}>
                     <div >
                             <div className="Send_Fund_header" >
                                Deposit History

@@ -3,7 +3,7 @@ import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNav
 MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBBox } from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
 import './newNav.css'
-
+const winWidth =   window.innerWidth
 class NavbarPage extends Component {
 
     constructor(props){
@@ -13,6 +13,9 @@ class NavbarPage extends Component {
             };
     }
         
+    componentDidMount(){
+    
+    }
 
 toggleCollapse = () => {
   this.setState({ isOpen: !this.state.isOpen });
@@ -57,7 +60,7 @@ render() {
               <MDBNavLink to="#" onClick={() => this.props.onClick3()}>BUSSINESS PLAN</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem className="Nav_Item">
-              <MDBBox mt="1" justifyContent="center" alignContent="center">{this.props.Login}</MDBBox>
+              <MDBBox  justifyContent="center" alignContent="center">{this.props.Login}</MDBBox>
             </MDBNavItem>
             <MDBNavItem className="Nav_Item">
            

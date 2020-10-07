@@ -76,6 +76,18 @@ h1 {
   margin-inline-end: 0px;
   /* font-weight: bold; */
 
+.App_main{
+margin: 0px;
+padding: 0px;
+background-color: #fff;
+overflow: auto;
+}
+
+.App_main::-webkit-scrollbar{
+
+  display: none;
+  }
+  
 
 .btcbucket-text{
    color:#546e7a,

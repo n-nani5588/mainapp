@@ -29,11 +29,13 @@ export default class Home extends React.Component{
                              <Grid item xs={12} lg={5}>
                               <div className="home_item">
                               <MDBAnimation type="slideInLeft" duration="1s" delay="0s">
-                                   <h1>Welcome next level cryptocurrency token with faster transfer</h1>
+                                   <h1>WELCOME TO <br/></h1>
+                                   <h1>GENIE </h1>
+                                   <h1>TREASURES</h1>
                               </MDBAnimation>
-                              <MDBAnimation type="slideInLeft" duration="1s" delay="0.5s">
-                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt labore dolore magna ipsum dolor sit amet consectetur.</p>
-                              </MDBAnimation>
+                              {/* <MDBAnimation type="slideInLeft" duration="1s" delay="0.5s">
+                                  
+                              </MDBAnimation> */}
                               {/* <MDBAnimation type="slideInLeft" duration="1s" delay="1s">
                                    <div style={{display:"flex",width:"100%"}}>
                                     <MDBBtn rounded size="lg" color="info" >{this.props.Signup}<MDBIcon icon="user-plus" className="ml-2" /></MDBBtn>

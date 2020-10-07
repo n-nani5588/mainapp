@@ -26,7 +26,7 @@ export default class extends React.Component{
                                 data-aos-easing="ease-in-sine"> */}
                                       <span class="fa fa-eye"></span>
                                       <h2>VISION</h2>
-                                      <p class="lead">To make people's much better than we found them.To make people's lives better everyday.To care for the world we live in, from the oppurtunity we make to the ways in which we give back to society.</p>
+                                      <p class="lead">To make people live much better than we found from their daily lives and care for the world from the oppurtunity we make to the ways in which we give back to society.</p>
                                     {/* </div> */}
                                 </div>
                                   <div class="col-lg-4 col-sm-6 col-ex-12 about-item wow lightSpeedIn" data-wow-offset="200">
@@ -35,7 +35,7 @@ export default class extends React.Component{
                                     data-aos-duration="2000"> */}
                                     <span class="fa fa-sitemap"></span>
                                     <h2>MISSION </h2>
-                                    <p class="lead">To become World No.1 Crowd funding Company. Provides Best Quality Leadership in the world who will lead business Company. Better Lives Everyday A positive performance depends on several factors.</p>
+                                    <p class="lead">Bring wealth & happiness to reality for mankind and provide the best customer service possible from over the Internet using a web browser.</p>
                                   {/* </div> */}
                                   </div>
                                   {/* <div class="clearfix visible-md-block visible-sm-block"></div> */}

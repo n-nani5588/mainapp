@@ -27,7 +27,7 @@ export default function DenseAppBar() {
                                          <p>
                                           GENIE TREASURES is a best experienced people's
                                           community where we build social platform and provides
-                                          best opportunity to you and your career,
+                                          best opportunity to you and your career.
                                         </p>
                                         </div>
                                 </Grid>
@@ -71,7 +71,7 @@ export default function DenseAppBar() {
             </Grid>
            <Grid>
              <div style={{padding:"0% 4%"}}>
-                    <small class="f6 db ">Copyright © 2016 <b class="ttu">GENIE TREASURES Inc</b>., All Rights Reserved</small>
+                    <small class="f6 db ">Copyright © 2020 <b class="ttu">GENIE TREASURES Inc</b>., All Rights Reserved</small>
               </div>
            </Grid>
        

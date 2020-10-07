@@ -263,7 +263,7 @@ class Withdrawal extends React.Component {
                                                 </div>
                                                 <div className="Send_Fund_body_wallet">
             
-                                                <input type="text" readOnly value="RECIEVED INCOME" className="form-control"></input>
+                                                <input type="text" readOnly value="RECEIVED INCOME" className="form-control"></input>
                                                 <input type="text"  value={this.state.recievedIncome} disabled className="form-control"></input>
                                                 <input type="number" value={this.state._recieved} onChange={(e)=> this.handleChange(e)} required name="_recieved" min="0" step="any" max={this.state.recievedIncome}  className="form-control"></input>
 

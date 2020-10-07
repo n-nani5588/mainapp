@@ -79,7 +79,7 @@ class App extends React.Component {
   render(){
       return (
 
-        <div style={{margin:"0px",padding:"0px",backgroundColor:"white"}}>
+        <div className="App_main">
 
          {/* Header Div */}
        

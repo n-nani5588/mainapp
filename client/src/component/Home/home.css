@@ -46,8 +46,10 @@
 
 .home_item h1 {
     
-    font-size: 40px;
+    font-size: 3rem;
     font-weight: bold;
+  
+    text-align: center;
     color: white;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0% 5% 0% 20% ;

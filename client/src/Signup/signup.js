@@ -50,7 +50,7 @@ import './signup.css';
     return(
       <div>
 
-         <div  size="small"  style={{padding:"5px 0px 0px 10px",color:"white"}} 
+         <div  size="small"  style={{padding:"2px 0px 0px 10px",color:"white"}} 
            onClick={() => this.handleEnter()} 
            color="inherit">SIGN UP</div>
        
