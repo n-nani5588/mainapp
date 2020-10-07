@@ -40,7 +40,7 @@ componentDidMount(){
       }
 
  handleLogout = () => {
-   console.log("logout");
+  // console.log("logout");
 
   sessionStorage.setItem("LOGIN",JSON.stringify(false));
   

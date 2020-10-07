@@ -11,22 +11,22 @@ let Autopooldata = {
       {
         label: 'user Id',
         field: 'userid',
-        
+
       },
       {
         label: 'Date',
         field: 'date',
-        
+
       },
       {
         label: 'Level one',
         field: 'level',
-        
+
       },
       {
         label: 'Members',
         field: 'members',
-        
+
       }
     ],
     rows:[]
@@ -41,22 +41,22 @@ let Availabledata = {
       {
         label: 'user Id',
         field: 'userid',
-        
+
       },
       {
         label: 'Date',
         field: 'date',
-        
+
       },
       {
         label: 'Level One',
         field: 'level',
-        
+
       },
       {
         label: 'Available',
         field: 'available',
-        
+
       }
     ],
     rows:[]
@@ -71,16 +71,16 @@ let Availabledata = {
       {
         label: 'user Id',
         field: 'userid',
-        
+
       },
       {
         label: 'Date',
         field: 'date',
-        
+
       },
       {
         label: 'Level One',
-        field: 'l1', 
+        field: 'l1',
       },
       {
         label: 'Level Two',
@@ -92,7 +92,7 @@ let Availabledata = {
       },
       {
         label: 'Level One Income',
-        field: 'l1in', 
+        field: 'l1in',
       },
       {
         label: 'Level Two Income',
@@ -105,7 +105,7 @@ let Availabledata = {
       {
         label: 'Available',
         field: 'available',
-        
+
       }
     ],
     rows:[]
@@ -125,19 +125,19 @@ class Autopool extends React.Component {
             data3 : {},
             deleteArray: []
         }
-        
+
     }
 
    async componentDidMount(){
-        
+
         //Get- Pool - details
 
        await axios.get('/api/Admin/getPoolOneDetails')
         .then(res => {
-            
+
             if( parseInt(res.data.status) === parseInt(1) ){
 
-               console.log('Userdata :' , res.data.users1);
+              // console.log('Userdata :' , res.data.users1);
                this.createAutopoolTable(res.data.users1)
 
             }else{
@@ -155,7 +155,7 @@ class Autopool extends React.Component {
 
             if( parseInt(res.data.status) === parseInt(1) ){
 
-                console.log('Userdata :' , res.data.users2);
+             //   console.log('Userdata :' , res.data.users2);
                 this.createAvailaleTable(res.data.users2)
 
             }else{
@@ -170,7 +170,7 @@ class Autopool extends React.Component {
 
           if( parseInt(res.data.status) === parseInt(1) ){
 
-            console.log('Userdata :' , res.data.users);
+            // console.log('Userdata :' , res.data.users);
             this.createDeleteTable(res.data.users)
 
         }else{
@@ -185,11 +185,11 @@ class Autopool extends React.Component {
     createAutopoolTable= (members)=> {
         let i = 0;
         Autopooldata.rows=[];
-       console.log(members);
+
    { members &&   members.map(Direct => {
 
               const details = Direct
-              console.log(Direct);
+
               i++
               const obj = {
 
@@ -198,24 +198,24 @@ class Autopool extends React.Component {
                 date:Direct.date,
                 level:Direct.levelOne,
                 members:Direct.members.join(',')
-                        
+
               }
-      
+
               Autopooldata.rows.push(obj)
       } )}
 
       this.setState({data1: Autopooldata,autopoolArray:members})
-      
+
       }
 
     createAvailaleTable= (members)=> {
         let i = 0;
         Availabledata.rows=[];
-       console.log(members);
+
    { members &&   members.map(Direct => {
 
               const details = Direct
-              console.log(Direct);
+
               i++
               const obj = {
 
@@ -224,24 +224,24 @@ class Autopool extends React.Component {
                 date: Direct.date,
                 level: Direct.levelOne,
                 available: Direct.available
-                        
+
               }
-      
+
               Availabledata.rows.push(obj)
       } )}
 
       this.setState({data2:Availabledata,AvailableArray: members})
-      
+
       }
 
   createDeleteTable = (members)=> {
         let i = 0;
         Deletedata.rows=[];
-       console.log(members);
+
    { members &&   members.map(Direct => {
 
-              
-              console.log(Direct);
+
+
               i++
               const obj = {
 
@@ -255,14 +255,14 @@ class Autopool extends React.Component {
                 l2in: Direct.levelTwoIncome.$numberDecimal,
                 l3in: Direct.levelThreeIncome.$numberDecimal,
                 available: Direct.available
-                        
+
               }
-      
+
               Deletedata.rows.push(obj)
       } )}
 
       this.setState({data3:Deletedata,deleteArray: members })
-      
+
       }
 
     handleInitializeAutopool = async () =>{
@@ -270,32 +270,32 @@ class Autopool extends React.Component {
       let AvailableArr = this.state.AvailableArray
       let autoarray = this.state.autopoolArray
       let loopNumber =  Math.floor(AvailableArr.length/4)
-      console.log(loopNumber);
+
       let j = 0;
 
       for (let i = 0; i < loopNumber; i++) {
-        console.log("executing");
+       // console.log("executing");
         let K= 0,userids= [],ids=[];
         do {
 
-             userids.push( AvailableArr[j].userId ) 
+             userids.push( AvailableArr[j].userId )
 
           K++;
           j++;
         } while (K < 4);
-        console.log("userids :",userids);
+
 
       await  axios.post('/api/Admin/InitialisedAutopoolOne',{
 
           useridsArray: userids,
           _id: autoarray[i]._id,
           userid:  autoarray[i].userId
-          
+
         }).then(res => {
-          console.log(res.data);
+         // console.log(res.data);
           document.getElementById('display').append(res.data.msg);
         })
-        
+
       }
 
     }
@@ -306,17 +306,17 @@ class Autopool extends React.Component {
       let DeleteArray = this.state.deleteArray,k=[];
 
       for (let i = 0; i < DeleteArray.length; i++) {
-        
+
        await axios.post('/api/Admin/performDeleteOne',{
           userid: DeleteArray[i].userId
         })
         .then(es => {
-           console.log(es);
+           console.log();
         })
-        
+
       }
 
-      
+
 
     }
 
@@ -344,7 +344,7 @@ class Autopool extends React.Component {
                                 data={this.state.data1}
                                 />
                 </div>
-                
+
                 {/* Autopool-Available table */}
                 <div style={{padding:"15px 30px",margin:"10px",backgroundColor:"black",color:"White"}}>
                     Available members details
@@ -360,17 +360,17 @@ class Autopool extends React.Component {
                                 noBottomColumns
                                 responsiveSm
                                 responsiveMd
-                                
+
                                 data={this.state.data2}
                                 />
                 </div>
                 <div id="display"></div>
                 {/* Initialize Autopool Button */}
-                <button 
+                <button
                 className="btn btn-primary btn-sm"
                 onClick={() => this.handleInitializeAutopool()}
                 >
-                     Intialize Autopool 
+                     Intialize Autopool
                 </button>
 
 
@@ -388,13 +388,13 @@ class Autopool extends React.Component {
                                 noBottomColumns
                                 responsiveSm
                                 responsiveMd
-                                
+
                                 data={this.state.data3}
                                 />
                 </div>
-                
-                {/* Initialize Delete Pool Members Button */} 
-                <button 
+
+                {/* Initialize Delete Pool Members Button */}
+                <button
                 className="btn btn-primary btn-sm"
                 onClick={()=> this.handleDelete()}
                 > Remove poolOne Ids </button>

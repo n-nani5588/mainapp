@@ -29,7 +29,7 @@ export default class Home extends React.Component{
                              <Grid item xs={12} lg={5}>
                               <div className="home_item">
                               <MDBAnimation type="slideInLeft" duration="1s" delay="0s">
-                                   <h1>WELCOME TO <br/></h1>
+                                   <h1>WELCOME &nbsp;TO <br/></h1>
                                    <h1>GENIE </h1>
                                    <h1>TREASURES</h1>
                               </MDBAnimation>

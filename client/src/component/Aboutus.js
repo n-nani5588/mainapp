@@ -27,9 +27,9 @@ export default class extends React.Component{
                         <img src={process.env.PUBLIC_URL + '/images/imgqw.jpg'} style={{width:"450px",height:"250px",float:"left",margin:"22px 30px 12px 0px"}}></img>
                         </Grid> */}
                      <div data-aos="zoom-in"> 
-                        <p style={{letterSpacing:"1px",fontWeight:"thin"}}>GENIE TREASURES is a best experienced people's
+                        <p style={{letterSpacing:"1px",fontWeight:"thin"}}>GENIE TREASURES is a best experienced people
                             community where we build social platform and provides
-                            best opportunity to you and your career, if you just help
+                            best opportunity to you and your career if you just help
                             enough people get what they need. We live by this easy
                             yet powerful philosophy and that we invite you to
                             embrace it so as to realize all of your dreams. It's great

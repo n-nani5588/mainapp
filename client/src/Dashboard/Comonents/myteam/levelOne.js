@@ -92,7 +92,7 @@ class LevelOne extends React.Component {
       })
 
         const userdata = JSON.parse(sessionStorage.getItem('USER_DETAILS'));
-        console.log(this.props.length);
+       // console.log(this.props.length);
         try{
                     if(this.props.data.length > 0){
 
@@ -101,12 +101,12 @@ class LevelOne extends React.Component {
                                     useridsArray: this.props.data
                                 })
                                 .then(res => {
-                                  console.log(res.data.users);
+                               //   console.log(res.data.users);
 
                                                   if(parseInt(res.data.status) === parseInt(1))
                                                   {
                                                     this.createTable(res.data.users);
-                                                      console.log(data);
+                                                   //   console.log(data);
                                                       
                                                   }
                                                   else
@@ -146,7 +146,7 @@ class LevelOne extends React.Component {
     createTable = (members)=> {
       let i = 0;
       data.rows = [];
-      console.log(members);
+      //console.log(members);
     {members && members.map(Direct => {
             i++
             const obj = {

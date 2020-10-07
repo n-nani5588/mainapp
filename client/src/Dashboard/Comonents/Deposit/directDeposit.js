@@ -38,13 +38,13 @@ class  DirectDeposit extends React.Component {
         .then(res => {
             console.log(res.data);
             if(parseInt(res.data.status) === parseInt(1)){
-                console.log(res.data.news);
+             //   console.log(res.data.news);
                 this.setState({ 
                     QrImage : res.data.news[0].QRimage[0].img,
                     _bitAddress : res.data.news[0].QRimage[0].btcAddress,
                     Loading: false
                 })
-                console.log(this.state.currentNews);
+              //  console.log(this.state.currentNews);
             }else{
                 this.setState({
                     Loading: false

@@ -49,7 +49,7 @@ export default class SignUpPart2 extends React.Component {
                            </tr>
                    </table>
                 </div>
-                   {console.log(this.props.data)}
+                 {/* {console.log(this.props.data)} */}
                     {/* <div style={{width:"100%",
                                 margin:"1%",
                                 color:"white",

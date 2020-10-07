@@ -84,7 +84,7 @@ let newsnew ;
     
     const classes = useStyles();    
     const userdata = JSON.parse(sessionStorage.getItem('USER_DETAILS'))
-    console.log(userdata);
+    //console.log(userdata);
     const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
@@ -115,7 +115,7 @@ let newsnew ;
      
      <Grid container spacing={2}>
        <Grid item xs={12} justify="center" sm={11}>
-           <input className="_input_class form-control sm" value={`http://www.genietreasures.com/Reffer/${userdata.userId}`} id="myInput"/>
+           <input className="_input_class form-control sm" value={`http://www.genietreasures.com/Refer/${userdata.userId}`} id="myInput"/>
        </Grid>
        <Grid item xs={12} sm={1}>
        <span> <button className="btn btn-sm" onClick={() => Copy_function()}>Copy</button></span>

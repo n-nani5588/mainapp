@@ -25,7 +25,7 @@ export default function DenseAppBar() {
                                                       fontSize:"15px",
                                                       fontWeight:"normal"}}>
                                          <p>
-                                          GENIE TREASURES is a best experienced people's
+                                          GENIE TREASURES is a best experienced people
                                           community where we build social platform and provides
                                           best opportunity to you and your career.
                                         </p>

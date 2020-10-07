@@ -92,7 +92,7 @@ class LevelEight extends React.Component {
         })
 
         const userdata = JSON.parse(sessionStorage.getItem('USER_DETAILS'));
-        console.log(this.props.data);
+       // console.log(this.props.data);
         
           try
           {
@@ -105,13 +105,13 @@ class LevelEight extends React.Component {
                             })
                             .then(res => {
 
-                                                  console.log(res.data.users);
+                                                //  console.log(res.data.users);
 
                                                   if(parseInt(res.data.status) === parseInt(1))
                                                   {
 
                                                           this.createTable(res.data.users);
-                                                          console.log(data);
+                                                        //  console.log(data);
                                                       
                                                   }
                                                   else
@@ -152,7 +152,7 @@ class LevelEight extends React.Component {
     createTable = (members)=> {
 
                 let i = 0;
-                console.log(members);
+              //  console.log(members);
                 data.rows = [];
               {members && members.map(Direct => {
                       i++

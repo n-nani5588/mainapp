@@ -45,7 +45,7 @@ export default class About extends React.Component{
 
                         {/* <h2 style={{fontWeight:"bold"}}> HOW&nbsp; WE&nbsp; ARE </h2> */}
                         <p style={{letterSpacing:"2px",fontSize:"18px",textAlign:"justify",fontWeight:"bold",color:"white"}}>
-                            GENIE TREASURES is a best experienced people's community 
+                            GENIE TREASURES is a best experienced people community 
                             where we build social platform and provides best opportunity 
                             to you and your career, if you just help enough people get what 
                             they need. We live by this easy yet powerful philosophy and that we

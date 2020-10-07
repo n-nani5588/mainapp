@@ -124,7 +124,7 @@ class AllMembers extends React.Component {
     const userdata = JSON.parse(sessionStorage.getItem('USER_DETAILS'));
     const row = data.rows;
   
-           console.log(row);
+         //  console.log(row);
   
      try{
                   await Axios.post('/api/users/All_Members',{userid: userdata.userId})

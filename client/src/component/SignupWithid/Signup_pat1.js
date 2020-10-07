@@ -39,18 +39,18 @@ class SignUpPart1 extends React.Component {
 
   handleSubmit = (e) => {
 
-    console.log("inside");
+  //  console.log("inside");
         e.preventDefault();
     
           this.setState({
             Loading: true
           })
     try{
-                console.log(e.target.Password.value, e.target.Confirm_Password.value);
+              //  console.log(e.target.Password.value, e.target.Confirm_Password.value);
     
                 if((e.target.Password.value).toString() === (e.target.Confirm_Password.value).toString()){
                 
-                  console.log(e.target);
+                //  console.log(e.target);
                   axios.post('/api/users/Signup_User',{ 
                     firstName: e.target.First_Name.value,
                     lastName:e.target.Last_Name.value,
@@ -60,7 +60,7 @@ class SignUpPart1 extends React.Component {
                     country:document.getElementById('country-select').value
                   })
                   .then(res => {
-                    console.log(res.data)
+                  //  console.log(res.data)
                     if(parseInt(res.data.status) === parseInt(1)){
                       document.getElementById('Error_Msg').innerHTML = "Sign up Successfull !"
                       this.setState({

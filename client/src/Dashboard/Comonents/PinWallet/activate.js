@@ -32,12 +32,12 @@ export default class Activate extends React.Component{
                 Err_message: "something",
                 open: false,
               }
-              console.log(this.userdata.availablePins.length);
+             // console.log(this.userdata.availablePins.length);
     }
 
     handleMemberId = async (e) => {
       e.preventDefault();
-      console.log("in in in ini in i ni nin i ni");
+    //  console.log("in in in ini in i ni nin i ni");
       this.setState({
         Loading_id : true
       })
@@ -48,10 +48,10 @@ export default class Activate extends React.Component{
 
                 if(id === this.userdata.userId){
                   
-                   console.log("idididid",this.state.Active);
+                  // console.log("idididid",this.state.Active);
 
                     if(this.state.Active){
-                      console.log("active active active");
+                     // console.log("active active active");
                             // document.getElementById('Update_Msg').innerHTML = "Account is Already Active!"
                              this.setState({Loading_id: false,
                                Err_message: "Account is Already Active!",
@@ -59,7 +59,7 @@ export default class Activate extends React.Component{
                     }
                     else
                     {
-                              console.log("active");
+                             // console.log("active");
                               this.setState({
                                   memberName: "Self",
                                   memberId: this.state._id,
@@ -68,7 +68,7 @@ export default class Activate extends React.Component{
                                   disablebutton:false,
                                   Loading_id: false
                               })
-                              console.log(this.state.pinslength,this.state.disablebutton,this.state.pins);
+                            //  console.log(this.state.pinslength,this.state.disablebutton,this.state.pins);
 
                      }
 
@@ -82,7 +82,7 @@ export default class Activate extends React.Component{
                           
                                       if(res.data.user.Active.toString() === "false"){
 
-                                                    console.log(res.data.user);
+                                                   // console.log(res.data.user);
                                                     this.setState({
                                                                 memberName : res.data.user.firstName+""+res.data.user.lastName,
                                                                 memberId: res.data.user._id,
@@ -95,7 +95,7 @@ export default class Activate extends React.Component{
                                                                 open: true,
                                                                 
                                                     })
-                                                    console.log(this.state.pinslength,this.state.disablebutton,this.state.pins,);
+                                                   // console.log(this.state.pinslength,this.state.disablebutton,this.state.pins,);
                                           //          document.getElementById('Update_Msg').innerHTML = "Enter Pin"
 
                                       }
@@ -163,7 +163,7 @@ export default class Activate extends React.Component{
                     ActivatingId : this.state._id
                   })
                   .then(res => {
-console.log(res.data);
+//console.log(res.data);
                                   if(parseInt(res.data.status) === parseInt(1)){
                                     
                                             sessionStorage.setItem('USER_DETAILS',JSON.stringify(res.data.user1))
@@ -181,12 +181,12 @@ console.log(res.data);
                                               open: true,
 
                                             })
-                                            console.log(this.state.pinslength,this.state.disablebutton,this.state.pins,);
+                                        //    console.log(this.state.pinslength,this.state.disablebutton,this.state.pins,);
                                             
                                   }
                                   else
                                   {
-                                    console.log("else part is going");
+                                  //  console.log("else part is going");
                                               this.setState({
                                                 Loading : false,
                                                 Err_message: "Error ! something Went Wrong",

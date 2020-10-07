@@ -93,7 +93,7 @@ componentDidMount(){
   try{
         axios.get(`/api/users/GetTickets/${this.state._userid}`)
         .then(res => {
-            console.log(res.data.Tickets);
+        //    console.log(res.data.Tickets);
             if(parseInt(res.data.status) === parseInt(1)){
                 this.createTable(res.data.Tickets)
                 this.setState({
@@ -134,7 +134,7 @@ try{
               message: obj,
               _id: this.state.ticketid
           }).then(res => {
-              console.log(res.data.message);
+             // console.log(res.data.message);
               if(parseInt(res.data.status) === parseInt(1)){
                   this.setState({
                       messages: res.data.Tickets.message,

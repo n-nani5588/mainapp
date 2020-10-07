@@ -95,15 +95,15 @@ class DirectMembers extends React.Component {
   const userdata = JSON.parse(sessionStorage.getItem('USER_DETAILS'));
   const row = data.rows;
 
-         console.log(row);
+      //   console.log(row);
     try{
      
                 await Axios.post('/api/users/Direct_Members',{userid: userdata.userId})
                 .then(res => {
-                  console.log(res.data.users);
+              //    console.log(res.data.users);
                   if(parseInt(res.data.status) === parseInt(1)){
                     this.createTable(res.data.users);
-                    console.log(data);
+                  //  console.log(data);
                        this.setState({data1:data , Loading : false})
                   }
                   else
@@ -131,7 +131,7 @@ class DirectMembers extends React.Component {
 
   createTable= (members)=> {
         let i = 0;
-        console.log(members);
+     //   console.log(members);
         data.rows = [];
       members.map(Direct => {
               i++

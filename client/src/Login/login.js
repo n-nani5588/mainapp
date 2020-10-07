@@ -38,7 +38,7 @@ let interval;
   }
 
   handleLogin = () =>{
-    console.log("logged in");
+   // console.log("logged in");
     
   }
   
@@ -55,7 +55,7 @@ submitLogin = async (e) => {
             .then(res => {
                       if(parseInt(res.data.status) === parseInt(200)){
 
-                              console.log(res.data.userdetails);
+                          //    console.log(res.data.userdetails);
                               sessionStorage.setItem('LOGIN',JSON.stringify(true));
                               sessionStorage.setItem('USER_DETAILS',JSON.stringify(res.data.userdetails));
                               this.setState({
@@ -74,7 +74,7 @@ submitLogin = async (e) => {
                                   document.getElementById('ERR_MSG').innerHTML = ""
                                 }, 3000);
 
-                                console.log(res.data.status);
+                           //     console.log(res.data.status);
                       }else{
                                 document.getElementById('ERR_MSG').innerHTML = res.data.msg
 
@@ -84,7 +84,7 @@ submitLogin = async (e) => {
                                 interval = setTimeout(() => {
                                   document.getElementById('ERR_MSG').innerHTML = ""
                                 }, 3000);
-                                console.log(res.data.status);
+                           //     console.log(res.data.status);
                       }
             })
             .catch(err => {

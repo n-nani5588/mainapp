@@ -76,7 +76,7 @@ class Profile extends React.Component {
 
         await axios.post('/api/users/getSingleUserDetails',{userid : userdata._id})
       .then(res => {
-          console.log(res);
+      //    console.log(res);
         sessionStorage.setItem('USER_DETAILS',JSON.stringify(res.data.user));
         this.setState({
           id:userdata._id,
@@ -113,7 +113,7 @@ class Profile extends React.Component {
                })
                .then(res => { 
                    
-                  console.log(res.data)
+              //    console.log(res.data)
 
                   if(parseInt(res.data.status) === parseInt(200))
                   {

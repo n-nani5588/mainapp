@@ -183,7 +183,7 @@ async function getResponse(){
   const userdata = JSON.parse(sessionStorage.getItem('USER_DETAILS'))
   await axios.post('/api/users/getSingleUserDetails',{userid : userdata._id})
 .then(res => {
-    console.log(res);
+  //  console.log(res);
     sessionStorage.setItem('USER_DETAILS',JSON.stringify(res.data.user));
   
 })
@@ -215,7 +215,7 @@ export default function Dashboard(props) {
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleProfileMenuOpen = (event) => {
-    console.log("logout");
+   // console.log("logout");
                     sessionStorage.setItem("LOGIN",JSON.stringify(false));
                     history.push('/')
                     window.location.reload()
@@ -428,7 +428,7 @@ export default function Dashboard(props) {
         <LastItemTwo
         click={() =>{
 
-          console.log("logout");
+         // console.log("logout");
           sessionStorage.setItem("LOGIN",JSON.stringify(false));
           history.push('/')
           window.location.reload()

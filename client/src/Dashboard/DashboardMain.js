@@ -7,7 +7,7 @@ class DashboardMain extends React.Component {
 
     constructor(props){
         super(props);
-        console.log(this.props.data);
+      //  console.log(this.props.data);
         this.state = {
              Loading:false,
              _id: this.props.data._id
@@ -16,7 +16,7 @@ class DashboardMain extends React.Component {
 
   async  componentWillMount(){
 
-    console.log("in did mount");
+  //  console.log("in did mount");
 
     // const userdata = JSON.parse(sessionStorage.getItem('USER_DETAILS'))
     //     await axios.post('/api/users/getSingleUserDetails',{userid : userdata._id})

@@ -38,7 +38,7 @@ class App extends React.Component {
    //login 
    const login = JSON.parse(sessionStorage.getItem('LOGIN'))
    const userdata = JSON.parse(sessionStorage.getItem('USER_DETAILS'))
-   console.log(userdata);
+  // console.log(userdata);
 
 
    if(login){

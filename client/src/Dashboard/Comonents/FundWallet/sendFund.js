@@ -48,7 +48,7 @@ class SendFund extends React.Component{
                           parseFloat( this.userdata.autoPoolIncome.$numberDecimal)+
                           parseFloat( this.userdata.fundSharingIncome.$numberDecimal)+
                           parseFloat( this.userdata.recievedIncome.$numberDecimal)
-                          console.log(Available);
+                       //   console.log(Available);
     
     
           
@@ -90,7 +90,7 @@ class SendFund extends React.Component{
        const userdata = JSON.parse(sessionStorage.getItem('USER_DETAILS'))
         await axios.post('/api/users/getSingleUserDetails',{userid : userdata._id})
       .then(res => {
-          console.log(res);
+          //console.log(res);
         sessionStorage.setItem('USER_DETAILS',JSON.stringify(res.data.user));
         this.setState({
             levelIncome: parseFloat( res.data.user.levelIncome.$numberDecimal),
@@ -119,7 +119,7 @@ class SendFund extends React.Component{
     handleCheck = (e)=> {
 
         const AvailableBalance = document.getElementById('Available_Balance').value
-        console.log("in check:"+AvailableBalance);
+       // console.log("in check:"+AvailableBalance);
         if( parseFloat(0.00) > parseFloat(e.target.value)  ){
             if(parseFloat(e.target.value) <= parseFloat(AvailableBalance)){
              //await code
@@ -142,7 +142,7 @@ class SendFund extends React.Component{
 
             try{
                             const id = document.getElementById('Member_Id').value
-                            console.log("click");
+                          //  console.log("click");
                             
                             if(id === this.state.memberId){
                             
@@ -150,7 +150,7 @@ class SendFund extends React.Component{
                                             
                                                     if(parseFloat(e.target._Send.value) <= parseFloat(e.target._Available.value)){
                                                     //await code
-                                                                            console.log("in axios");
+                                                                          //  console.log("in axios");
                                                                          //   document.getElementById('ERR_MSG').innerHTML = "";
                                                                             await axios.post('/api/users/sendFund/update',{
                                                                                 
@@ -168,7 +168,7 @@ class SendFund extends React.Component{
 
                                                                             }).then(res => {
 
-                                                                                console.log(res.data);
+                                                                               // console.log(res.data);
 
                                                                                         if(parseInt(res.data.status) === parseInt(1)){
                                                                                             sessionStorage.setItem('USER_DETAILS',JSON.stringify(res.data.user));
@@ -217,7 +217,7 @@ class SendFund extends React.Component{
                                                     }
 
                                         }else{
-                                                    console.log("2");
+                                                  //  console.log("2");
                                                   //  document.getElementById('ERR_MSG').innerHTML = "please enter valid Amount !"
                                                     this.setState({
                                                         Loading : false,
@@ -230,7 +230,7 @@ class SendFund extends React.Component{
 
                             }else{
                                // document.getElementById('ERR_MSG').innerHTML = "Member id changed !"
-                                console.log("1");
+                        //        console.log("1");
                                 this.setState({
                                     Loading : false,
                                     Err_message :  "Member id changed !",
@@ -275,7 +275,7 @@ class SendFund extends React.Component{
                             await axios.get(`/api/users/sendFund/${id}` )
                             .then(res => {
                                                if(parseInt(res.data.status) === parseInt(1)){
-                                                        console.log(res.data.user);
+                                                     //   console.log(res.data.user);
                                                         this.setState({
                                                                     sendUserDetails: res.data.user,
                                                                     memberName : res.data.user.firstName+""+res.data.user.lastName,

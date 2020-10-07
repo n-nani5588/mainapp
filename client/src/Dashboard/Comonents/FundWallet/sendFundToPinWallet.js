@@ -56,7 +56,7 @@ class SendFundToPinWallet extends React.Component{
             const userdata = JSON.parse(sessionStorage.getItem('USER_DETAILS'))
             await axios.post('/api/users/getSingleUserDetails',{userid : userdata._id})
           .then(res => {
-              console.log(res);
+            //  console.log(res);
             sessionStorage.setItem('USER_DETAILS',JSON.stringify(res.data.user));
             this.setState({
                 levelIncome: parseFloat( res.data.user.levelIncome.$numberDecimal),
@@ -81,7 +81,7 @@ class SendFundToPinWallet extends React.Component{
 
     handleSubmit = async (e)=> {
 
-        console.log("in submit");
+      //  console.log("in submit");
 
         this.setState({
             Loading : true
@@ -95,7 +95,7 @@ class SendFundToPinWallet extends React.Component{
                             
                                         if(parseFloat(e.target._Send.value) <= parseFloat(e.target._Available.value)){
                                         //await code
-                                                    console.log("in axiospin");
+                                                  //  console.log("in axiospin");
                                                    // document.getElementById('ERR_MSG').innerHTML = "";
                                                     await axios.post('/api/users/sendFund/pinWallet',{
                                                         

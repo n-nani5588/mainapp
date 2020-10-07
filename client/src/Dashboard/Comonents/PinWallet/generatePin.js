@@ -90,7 +90,7 @@ class GeneratePin extends React.Component {
  }
 
  treasure= (e) =>{
-   console.log(e.target.value);
+  // console.log(e.target.value);
    this.setState({
      multiplyWith: e.target.value
    })
@@ -105,7 +105,7 @@ class GeneratePin extends React.Component {
  }
 
  changehandle1= (e) => {
-    console.log(e.target.value);
+  //  console.log(e.target.value);
   this.setState({
          quantity1: e.target.value,
   })
@@ -120,9 +120,9 @@ class GeneratePin extends React.Component {
     Loading: true
   })
   
-  console.log(e.target._Quantity.value,e.target.Pin_Balance.value,e.target._Password.value);
+ // console.log(e.target._Quantity.value,e.target.Pin_Balance.value,e.target._Password.value);
       const total = (15*e.target._Quantity.value);
-  console.log(total);
+  //console.log(total);
  
   try{
             if(parseInt(0) < parseInt(total)){
@@ -143,7 +143,7 @@ class GeneratePin extends React.Component {
                                 if(parseInt(res.data.status) === parseInt(1)){
 
                                       sessionStorage.setItem('USER_DETAILS',JSON.stringify(res.data.userdetails));
-                                      console.log(res.data.userdetails);
+                                     // console.log(res.data.userdetails);
                                       this.setState({
                                         passwordVisible:false,
                                         pinBalance:res.data.userdetails.pinBalance.$numberDecimal,
@@ -155,7 +155,7 @@ class GeneratePin extends React.Component {
                                       })
                                   
                                       document.getElementById('password_pin').value = ""
-                                      console.log("success");
+                                     // console.log("success");
                                   
                                 }else { 
                                   
@@ -176,7 +176,7 @@ class GeneratePin extends React.Component {
                       })
 
                   }else{
-                  console.log("2");
+                  //console.log("2");
 
                  //   document.getElementById('ERR_MSG').innerHTML = "Does not have Enough Balance to Buy!"
                     this.setState({
@@ -188,7 +188,7 @@ class GeneratePin extends React.Component {
 
             }
             else{
-              console.log("1");
+             // console.log("1");
              ///     document.getElementById('ERR_MSG').innerHTML = "invalid Amount"
                   this.setState({
                     Loading: false,
@@ -214,10 +214,10 @@ class GeneratePin extends React.Component {
   })
   
   try{
-          console.log(e.target._Quantity1.value,e.target.Pin_Balance1.value,e.target._Password1.value);
+        //  console.log(e.target._Quantity1.value,e.target.Pin_Balance1.value,e.target._Password1.value);
           const selectvalue = document.getElementById('Select_Treasure').value
           const total = ((selectvalue)*(e.target._Quantity1.value))
-          console.log(total);
+         // console.log(total);
         
           if(parseInt(0) < parseInt(total)){
 
@@ -237,7 +237,7 @@ class GeneratePin extends React.Component {
                                           if(parseInt(res.data.status) === parseInt(1)){
 
                                                       sessionStorage.setItem('USER_DETAILS',JSON.stringify(res.data.userdetails));
-                                                      console.log(res.data.userdetails);
+                                                //      console.log(res.data.userdetails);
                                                       this.setState({
                                                         passwordVisible:false,
                                                         pinBalance:res.data.userdetails.pinBalance.$numberDecimal,
@@ -258,7 +258,7 @@ class GeneratePin extends React.Component {
                                                         Pool_Ten : res.data.userdetails.poolTenPins.length > 0 ? true : false,
                                                       })
                                                       document.getElementById('treasure_password').value = ""
-                                                      console.log("success");
+                                                     // console.log("success");
 
                                           }else { 
 
@@ -280,7 +280,7 @@ class GeneratePin extends React.Component {
                               })
 
                   }else{
-                  console.log("2");
+               //   console.log("2");
 
               //      document.getElementById('ERR_MSG1').innerHTML = "Does not have Enough Balance to Buy!"
                     this.setState(
@@ -292,7 +292,7 @@ class GeneratePin extends React.Component {
 
           }
           else{
-                console.log("1");
+               // console.log("1");
               //      document.getElementById('ERR_MSG1').innerHTML = "invalid Amount"
                     this.setState(
                       {LoadingTreasurePins: false,
