@@ -26,7 +26,7 @@ render() {
     <Router>
       <MDBNavbar fixed="top" scrolling transparent  dark className="Navbar_New" light expand="md">
         <MDBNavbarBrand className="Nav_brand">
-          <strong className="white-text">GENIEE TREASURES</strong>
+          <strong className="white-text">GENIE TREASURES</strong>
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" className={this.state.isOpen?"navbarCollapse3":""} isOpen={this.state.isOpen} navbar>
